@@ -77,4 +77,3 @@ function writePassword() {
   console.log(writePassword());
 }
 
-document.getElementById("#generate").addEventListener("click", writePassword);
