@@ -72,6 +72,5 @@ function generatePassword() {
 function writePassword() {
   const password = generatePassword();
   document.getElementById("password").value = password;
-
 }
 
