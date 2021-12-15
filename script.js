@@ -43,5 +43,9 @@ const SYMBOL_CODES = arrayFromLowToHighNum(33, 47);
       return "";
     }
 
-    
   }
+
+  // Password Variables
+
+  var lowerCase = window.confirm("Would you like to use lower case characters?");
+  var upperCase = window.confirm("Would you like to use upper case characters?");
