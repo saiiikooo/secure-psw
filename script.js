@@ -14,3 +14,12 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
+
+
+
+const arrayFromLowToHighNum = (low, high) => {
+  const array = [];
+  for (let i =low; i <= high; i++) {
+    array.push(i);
+  }
+}
