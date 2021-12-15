@@ -36,7 +36,6 @@ function generatePassword() {
     window.alert("You did not enter a valid number, please try again.");
     return "";
 
-    console.log(generatePassword());
   }
   // Password variables 
   var lowerCase = window.confirm("Would you like to use lower case characters?");
@@ -74,6 +73,5 @@ function writePassword() {
   const password = generatePassword();
   document.getElementById("password").value = password;
 
-  console.log(writePassword());
 }
 
