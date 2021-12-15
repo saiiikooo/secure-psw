@@ -14,9 +14,6 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-
-
-
 const arrayFromLowToHighNum = (low, high) => {
   const array = [];
   for (let i =low; i <= high; i++) {
@@ -35,7 +32,6 @@ const SYMBOL_CODES = arrayFromLowToHighNum(33, 47);
   .concat(arrayFromLowToHighNum(123, 126));
 
   //choose how long your character length will be
-
   function generatePassword() {
     var passwordLength = +window.prompt("Choose a password length between 5 and 128")
     if (passwordLength < 8 || passwordLength > 128) {
@@ -46,7 +42,6 @@ const SYMBOL_CODES = arrayFromLowToHighNum(33, 47);
   }
 
   // Password Variables
-
   var lowerCase = window.confirm("Would you like to use lower case characters?");
   var upperCase = window.confirm("Would you like to use upper case characters?");
   var numbers = window.confirm("Would you like to use numbers?");
@@ -57,22 +52,30 @@ const SYMBOL_CODES = arrayFromLowToHighNum(33, 47);
   if (lowercase) {
     charCodes = charCodes.concat(LOWERCASE_CODES);
   }
-
   if (upperCase) {
     charCodes = charCodes.concat(UPPERCASE_CODES);
   }
-
   if (specialcharacters) {
     charCodes = charCodes.concat(SYMBOL_CODES);
   }
-
   if (numbers) {
     charCodes = charCodes.concat(NUMBER_CODES);
   }
-
   if (charCodes.length === 0) {
     alert("Please choose at least one set of characters");
     return ""
   }
 
-  
+  const passwordCharacters = Array.from({length: passwordLength}, () => {
+    const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)];
+    return String.fromCharCode(characterCode);
+  })
+  return passwordCharacters.join('');
+
+  function writePasword() {
+    const password = generatePassword();
+    document.getElememtById("password").value = password;
+  }
+
+  document.getElememtById("#generate")addEventListener("click", writePassword);
+
