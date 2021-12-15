@@ -37,7 +37,7 @@ function generatePassword() {
     return "";
 
   }
-  // Password variables 
+  // Different password variables
   var lowerCase = window.confirm("Would you like to use lower case characters?");
   var upperCase = window.confirm("Would you like to use upper case characters?");
   var numbers = window.confirm("Would you like to use numbers?");
@@ -68,7 +68,7 @@ function generatePassword() {
   return passwordCharacters.join('');
 }
 
-// Parse password to #password input
+// allow to Parse password to #password input
 function writePassword() {
   const password = generatePassword();
   document.getElementById("password").value = password;
