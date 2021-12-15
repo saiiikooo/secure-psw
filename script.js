@@ -49,3 +49,5 @@ const SYMBOL_CODES = arrayFromLowToHighNum(33, 47);
 
   var lowerCase = window.confirm("Would you like to use lower case characters?");
   var upperCase = window.confirm("Would you like to use upper case characters?");
+  var numbers = window.confirm("Would you like to use numbers?");
+  var specialcharacters = windows.confirm("Would you like to use special characters?");
