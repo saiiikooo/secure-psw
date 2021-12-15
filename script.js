@@ -51,3 +51,28 @@ const SYMBOL_CODES = arrayFromLowToHighNum(33, 47);
   var upperCase = window.confirm("Would you like to use upper case characters?");
   var numbers = window.confirm("Would you like to use numbers?");
   var specialcharacters = windows.confirm("Would you like to use special characters?");
+
+
+  let charCodes = [];
+  if (lowercase) {
+    charCodes = charCodes.concat(LOWERCASE_CODES);
+  }
+
+  if (upperCase) {
+    charCodes = charCodes.concat(UPPERCASE_CODES);
+  }
+
+  if (specialcharacters) {
+    charCodes = charCodes.concat(SYMBOL_CODES);
+  }
+
+  if (numbers) {
+    charCodes = charCodes.concat(NUMBER_CODES);
+  }
+
+  if (charCodes.length === 0) {
+    alert("Please choose at least one set of characters");
+    return ""
+  }
+
+  
